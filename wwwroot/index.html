@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CartePlaylist AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-book-open"></i>
+                    <h1>CartePlaylist AI</h1>
+                </div>
+                <p class="subtitle">Transforma cartile in melodii perfecte cu puterea AI</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Form Section -->
+            <section class="form-section">
+                <div class="form-container">
+                    <h2><i class="fas fa-music"></i> Genereaza playlist-ul perfect</h2>
+                    
+                    <form id="playlistForm" class="book-form">
+                        <div class="input-group">
+                            <label for="bookTitle">
+                                <i class="fas fa-book"></i>
+                                Titlul cartii
+                            </label>
+                            <input type="text" id="bookTitle" name="title" placeholder="Introdu titlul cartii" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="bookAuthor">
+                                <i class="fas fa-user"></i>
+                                Autorul
+                            </label>
+                            <input type="text" id="bookAuthor" name="author" placeholder="Introdu autorul">
+                        </div>
+                        
+                        <button type="submit" class="generate-btn" id="generateBtn">
+                            <i class="fas fa-magic"></i>
+                            Genereaza Playlist
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Loading Section -->
+            <section class="loading-section" id="loadingSection" style="display: none;">
+                <div class="loading-container">
+                    <div class="loading-spinner"></div>
+                    <h3>Generez playlist-ul perfect pentru tine...</h3>
+                    <p>AI-ul analizeaza cartea si creeaza melodii personalizate</p>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-container">
+                    <div class="book-info">
+                        <h3 id="bookTitleResult"></h3>
+                        <p id="bookAuthorResult"></p>
+                    </div>
+                    
+                    <div class="description-section">
+                        <h4><i class="fas fa-info-circle"></i> Descrierea cartii</h4>
+                        <p id="bookDescription"></p>
+                    </div>
+                    
+                    <div class="playlist-section">
+                        <h4><i class="fas fa-headphones"></i> Playlist sugerat</h4>
+                        <div id="playlistContent" class="playlist-content"></div>
+                    </div>
+                    
+                    <button class="new-search-btn" onclick="resetForm()">
+                        <i class="fas fa-plus"></i>
+                        Cauta alta carte
+                    </button>
+                </div>
+            </section>
+
+            <!-- Error Section -->
+            <section class="error-section" id="errorSection" style="display: none;">
+                <div class="error-container">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Oops! Ceva nu a mers bine</h3>
+                    <p id="errorMessage"></p>
+                    <button class="retry-btn" onclick="resetForm()">
+                        <i class="fas fa-redo"></i>
+                        Incearca din nou
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Powered by <strong>Gemini AI</strong> si <strong>Google Books API</strong></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
