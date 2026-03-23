@@ -120,12 +120,5 @@ CartePlaylist-Folosind-AI/
 - Descriptions longer than **800 characters** are truncated before being sent to Gemini to keep prompts bounded.
 - **CORS** is configured to allow any origin (`AllowAll`), which is convenient for local demos; tighten this for production deployments.
 
----
-
-## License
-
-Add a license file if you plan to distribute the project; the repository does not ship one by default.
-
----
 
 *Powered by **Gemini** and the **Google Books API**.*
